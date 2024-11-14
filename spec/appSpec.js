@@ -12,5 +12,9 @@ describe("Berlin clock kata project", function() {
     it("BerlinClock should return Y000 when given 1", function() {
         expect(1).toBe("Y000");
     });
+
+    it("BerlinClock should return YY00 when given 2", function() {
+        expect(2).toBe("YY00");
+    });
 })
 
