@@ -66,28 +66,28 @@ describe("Berlin clock kata project", function() {
 
     // --------------------  STEP 3 : Simple Hours  --------------------
 
-    it("BerlinClock should return 0000 when given 0", function() {
-        const result = main.getSimpleHour(0);
+    it("BerlinClock should return 0000 when given 00:00:00", function() {
+        const result = main.getSimpleHour("00:00:00");
         expect(result).toBe("0000");
     });
 
-    it("BerlinClock should return R000 when given 1", function() {
-        const result = main.getSimpleHour(1);
+    it("BerlinClock should return R000 when given 01:00:00", function() {
+        const result = main.getSimpleHour("01:00:00");
         expect(result).toBe("R000");
     });
 
-    it("BerlinClock should return RR00 when given 2", function() {
-        const result = main.getSimpleHour(2);
+    it("BerlinClock should return RR00 when given 02:00:00", function() {
+        const result = main.getSimpleHour("02:00:00");
         expect(result).toBe("RR00");
     });
 
-    it("BerlinClock should return RRR0 when given 3", function() {
-        const result = main.getSimpleHour(3);
+    it("BerlinClock should return RRR0 when given 03:00:00", function() {
+        const result = main.getSimpleHour("03:00:00");
         expect(result).toBe("RRR0");
     });
 
-    it("BerlinClock should return RRRR when given 4", function() {
-        const result = main.getSimpleHour(4);
+    it("BerlinClock should return RRRR when given 04:00:00", function() {
+        const result = main.getSimpleHour("04:00:00");
         expect(result).toBe("RRRR");
     });
 
