@@ -2,10 +2,10 @@ export class Main {
 
     
     //Returns berlin clock
-    berlinClock(time){ 
-        const simpleMinutes = this.getSimpleMinute(time);
-        const fiveMinutes = this.getFiveMinutes(time);
-        const simpleHour = this.getSimpleHour(time);
+    berlinClock(hours, minutes){ 
+        const simpleMinutes = this.getSimpleMinute(minutes);
+        const fiveMinutes = this.getFiveMinutes(minutes);
+        const simpleHour = this.getSimpleHour(hours);
         return `${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
     }
 
