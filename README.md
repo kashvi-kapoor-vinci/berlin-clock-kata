@@ -1,6 +1,6 @@
 # **Berlin Clock Kata**
 
-## **Group Members:**
+## **Group 12 Members:**
 - HAJJI Zahra
 - KAPOOR Kashvi
 - SHEIKH IDRIES Arwa
