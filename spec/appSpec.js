@@ -52,6 +52,17 @@ describe("Berlin clock kata project", function() {
         expect(result).toBe("YYRYYRYY000");
     });
 
+    // --------------------  STEP 1 and 2 : Combined tests  --------------------
+
+    it("BerlinClock should return YYR00000000:Y000 when given 00:16:00", function() {
+        const result = main.berlinClock("16");
+        expect(result).toBe("YYR00000000\nY000");
+    });
+
+    it("BerlinClock should return YYRYYRY0000:YYYY when given 00:39:00", function() {
+        const result = main.berlinClock("39");
+        expect(result).toBe("YYRYYRY0000\nYYYY");
+    });
     
 });
 
