@@ -47,4 +47,9 @@ export class Main {
         const fiveHours = parseInt(hours / 5);
         return "R".repeat(fiveHours) + "0".repeat(Math.abs(4-fiveHours));
     }
+
+    //Returns the display of seconds lamp
+    getSeconds(seconds){
+        return seconds % 2 === 0 ? "R" : "0"; // R for even seconds
+    }
 }
