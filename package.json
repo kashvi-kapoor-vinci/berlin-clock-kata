@@ -1,5 +1,15 @@
 {
-  "dependencies": {
+  "name": "berlin-clock-kata",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Hajji Zahra, Kapoor Kashvi, Sheikh Idries Arwa",
+  "license": "ISC",
+  "devDependencies": {
     "jasmine": "^5.4.0"
   }
 }
