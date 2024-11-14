@@ -56,4 +56,19 @@ export class Main {
     getSeconds(seconds){
         return seconds % 2 === 0 ? "R" : "0"; // R for even seconds
     }
+
+    // convertor
+    //23:45:54 -> [23],[45],[54]
+    //             0     1    2
+    getMinutes(time) {
+        return parseInt(time.split(':')[1]);
+    }
+
+    getHours(time) {
+        return parseInt(time.split(':')[0]);
+    }
+
+    getSecond(time) {
+        return parseInt(time.split(':')[2]);
+    }
 }
