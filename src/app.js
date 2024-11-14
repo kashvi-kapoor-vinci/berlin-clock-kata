@@ -5,23 +5,25 @@ export class Main {
     // "0" = Light Off
     
     //Returns berlin clock
-    berlinClock(hours, minutes, seconds){ 
-        const second = this.getSeconds(seconds);
-        const fiveHours = this.getFiveHours(hours);
-        const simpleHour = this.getSimpleHour(hours);
-        const fiveMinutes = this.getFiveMinutes(minutes);
-        const simpleMinutes = this.getSimpleMinute(minutes);
+    berlinClock(time){ 
+        const second = this.getSeconds(time);
+        const fiveHours = this.getFiveHours(time);
+        const simpleHour = this.getSimpleHour(time);
+        const fiveMinutes = this.getFiveMinutes(time);
+        const simpleMinutes = this.getSimpleMinute(time);
         return `${second}\n${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
     }
 
     //Returns the display of simple minutes as a string.
-    getSimpleMinute(minutes){
+    getSimpleMinute(time){
+        const minutes = this.getMinutes(time);
         const simpleMinutes = minutes % 5;
         return "Y".repeat(simpleMinutes) + "0".repeat(Math.abs(4-simpleMinutes));
     }
 
     //Returns the display of five minutes block as a string.
-    getFiveMinutes(minutes) {
+    getFiveMinutes(time) {
+        const minutes = this.getMinutes(time);
         const lightOn = Math.floor(minutes / 5); 
         let totalLights = ""; 
 
@@ -41,19 +43,22 @@ export class Main {
     }
 
     //Returns the display of simple hours as a string.
-    getSimpleHour(hours) {
+    getSimpleHour(time) {
+        const hours = this.getHours(time);
         const simpleHour = hours % 5;
         return "R".repeat(simpleHour) + "0".repeat(Math.abs(4-simpleHour));
     }
 
     //Returns the display of five hours block as a string.
-    getFiveHours(hours) {
+    getFiveHours(time) {
+        const hours = this.getHours(time);
         const fiveHours = parseInt(hours / 5);
         return "R".repeat(fiveHours) + "0".repeat(Math.abs(4-fiveHours));
     }
 
     //Returns the display of seconds lamp
-    getSeconds(seconds){
+    getSeconds(time){
+        const seconds = this.getSecond(time);
         return seconds % 2 === 0 ? "R" : "0"; // R for even seconds
     }
 
