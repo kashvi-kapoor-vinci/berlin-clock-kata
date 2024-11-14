@@ -33,4 +33,9 @@ export class Main {
 
         return totalLights; 
     }
+
+    getSimpleHour(hours) {
+        const simpleHour = hours % 5;
+        return "R".repeat(simpleHour) + "0".repeat(Math.abs(4-simpleHour));
+    }
 }
