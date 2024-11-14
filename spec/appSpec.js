@@ -103,5 +103,26 @@ describe("Berlin clock kata project", function() {
         expect(result).toBe("RRRR\nYYRYYRYYRYY\nYYYY");
     });
 
+    // --------------------  STEP 4 : Five Hours Block  --------------------
+
+    it("BerlinClock should return 0000 when given 0", function() {
+        expect(result).toBe("0000");
+    });
+
+    it("BerlinClock should return R000 when given 5", function() {
+        expect(result).toBe("R000");
+    });
+
+    it("BerlinClock should return RR00 when given 10", function() {
+        expect(result).toBe("RR00");
+    });
+
+    it("BerlinClock should return RRR0 when given 15", function() {
+        expect(result).toBe("RRR0");
+    });
+
+    it("BerlinClock should return RRRR when given 20", function() {
+        expect(result).toBe("RRRR");
+    });
 });
 
