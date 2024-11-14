@@ -2,12 +2,13 @@ export class Main {
 
     
     //Returns berlin clock
-    berlinClock(hours, minutes){ 
+    berlinClock(hours, minutes, seconds){ 
+        const second = this.getSeconds(seconds);
         const fiveHours = this.getFiveHours(hours);
         const simpleHour = this.getSimpleHour(hours);
         const fiveMinutes = this.getFiveMinutes(minutes);
         const simpleMinutes = this.getSimpleMinute(minutes);
-        return `${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
+        return `${second}\n${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
     }
 
     //Returns the display of simple minutes as a string.
