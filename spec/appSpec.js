@@ -20,5 +20,9 @@ describe("Berlin clock kata project", function() {
     it("BerlinClock should return YYY0 when given 3", function() {
         expect(3).toBe("YYY0");
     });
+
+    it("BerlinClock should return YYYY when given 4", function() {
+        expect(4).toBe("YYYY");
+    });
 })
 
