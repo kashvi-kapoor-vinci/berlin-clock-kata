@@ -33,18 +33,22 @@ describe("Berlin clock kata project", function() {
     // --------------------  STEP 2 : Five Minutes Block  --------------------
 
     it("BerlinClock should return Y0000000000 when given 5", function() {
+        const result = main.getFiveMinutes("5");
         expect(result).toBe("Y0000000000");
     });
 
     it("BerlinClock should return YYR00000000 when given 15", function() {
+        const result = main.getFiveMinutes("15");
         expect(result).toBe("YYR00000000");
     });
 
     it("BerlinClock should return YYRYYR00000 when given 30", function() {
+        const result = main.getFiveMinutes("30");
         expect(result).toBe("YYRYYR00000");
     });
 
     it("BerlinClock should return YYRYYRYY000 when given 40", function() {
+        const result = main.getFiveMinutes("40");
         expect(result).toBe("YYRYYRYY000");
     });
 
