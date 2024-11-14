@@ -129,5 +129,16 @@ describe("Berlin clock kata project", function() {
         const result = main.getFiveHours(20);
         expect(result).toBe("RRRR");
     });
+
+    // --------------------  STEP 1, 2, 3 and 4 : Combined tests  --------------------
+
+    it("BerlinClock should return RRR0:RR00:00000000000:0000 when given 17:00:00", function() {
+        expect(result).toBe("RRR0\nRR00\n00000000000\n0000");
+    });
+
+    it("BerlinClock should return RRRR:R000:YYRYYRYYRYY:YYYY when given 21:59:00", function() {
+        expect(result).toBe("RRRR\nR000\nYYRYYRYYRYY\nYYYY");
+    });
+
 });
 
