@@ -1,5 +1,8 @@
 export class Main {
 
+    // "Y" = Yellow (light on)
+    // "R" = Red (light on)
+    // "0" = Light Off
     
     //Returns berlin clock
     berlinClock(hours, minutes, seconds){ 
