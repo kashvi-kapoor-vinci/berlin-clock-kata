@@ -1,6 +1,11 @@
 export class Main {
 
     
+    //Returns berlin clock
+    berlinClock(time){ 
+        const simpleMinutes = this.getSimpleMinute(time);
+        return `${simpleMinutes}`;
+    }
 
     //Returns the display of simple minutes as a string.
     getSimpleMinute(time){
