@@ -154,6 +154,16 @@ describe("Berlin clock kata project", function() {
         expect(result).toBe("0");
     });
 
+    // --------------------  STEP 1, 2, 3, 4 and 5: Combined tests  --------------------
+    
+    it("BerlinClock should return R:RRR0:RR00:00000000000:0000 when given 17:00:30", function() {
+        const result = main.berlinClock(17,0,30);
+        expect(result).toBe("R\nRRR0\nRR00\n00000000000\n0000");
+    });
 
+    it("BerlinClock should return 0:RRRR:R000:YYRYYRYYRYY:YYYY when given 21:59:15", function() {
+        const result = main.berlinClock(21,59,15);
+        expect(result).toBe("0\nRRRR\nR000\nYYRYYRYYRYY\nYYYY");
+    });
 });
 
