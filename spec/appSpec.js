@@ -169,12 +169,12 @@ describe("Berlin clock kata project", function() {
     // --------------------  STEP 6 : Complete Berlin Clock --------------------
 
     it("BerlinClock should return 0:0000:RRRR:YYRY0000000:YYY0 when given 04:23:33", function() {
-        const result = main.berlinClock(4,23,33);
+        const result = main.berlinClock("04:23:33");
         expect(result).toBe("0\n0000\nRRRR\nYYRY0000000\nYYY0");
     });
 
     it("BerlinClock should return R:RRRR:RRR0:YYRYYRYYRYY:YYYY when given 23:59:58", function() {
-        const result = main.berlinClock(23,59,58);
+        const result = main.berlinClock("23:59:58");
         expect(result).toBe("R\nRRRR\nRRR0\nYYRYYRYYRYY\nYYYY");
     });
 });
