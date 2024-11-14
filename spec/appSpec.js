@@ -3,7 +3,7 @@ import {Main} from '../src/app.js';
 describe("Berlin clock kata project", function() {
     let main = new Main();
     
-    // --------------------  STEP 1 : Single Minute  --------------------
+    // --------------------  STEP 1 : Simple Minute  --------------------
 
     it("BerlinClock should return 0000 when given 0", function() {
         const result = main.getSimpleMinute("0");
@@ -63,6 +63,30 @@ describe("Berlin clock kata project", function() {
         const result = main.berlinClock("39");
         expect(result).toBe("YYRYYRY0000\nYYYY");
     });
+
+    // --------------------  STEP 3 : Simple Hours  --------------------
+
+    it("BerlinClock should return 0000 when given 0", function() {
+        expect(result).toBe("0000");
+    });
+
+    it("BerlinClock should return R000 when given 1", function() {
+        expect(result).toBe("R000");
+    });
+
+    it("BerlinClock should return RR00 when given 2", function() {
+        expect(result).toBe("RR00");
+    });
+
+    it("BerlinClock should return RRR0 when given 3", function() {
+        expect(result).toBe("RRR0");
+    });
+
+    it("BerlinClock should return RRRR when given 4", function() {
+        expect(result).toBe("RRRR");
+    });
+
+
     
 });
 
