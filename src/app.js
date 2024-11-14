@@ -35,8 +35,15 @@ export class Main {
         return totalLights; 
     }
 
+    //Returns the display of simple hours as a string.
     getSimpleHour(hours) {
         const simpleHour = hours % 5;
         return "R".repeat(simpleHour) + "0".repeat(Math.abs(4-simpleHour));
+    }
+
+    //Returns the display of five hours block as a string.
+    getFiveHours(time) {
+        const fiveHours = parseInt(hours / 5);
+        return "R".repeat(fiveHours) + "0".repeat(Math.abs(4-fiveHours));
     }
 }
