@@ -29,5 +29,25 @@ describe("Berlin clock kata project", function() {
         const result = main.getSimpleMinute("4");
         expect(result).toBe("YYYY");
     });
-})
+
+    // --------------------  STEP 2 : Five Minutes Block  --------------------
+
+    it("BerlinClock should return Y0000000000 when given 5", function() {
+        expect(result).toBe("Y0000000000");
+    });
+
+    it("BerlinClock should return YYR00000000 when given 15", function() {
+        expect(result).toBe("YYR00000000");
+    });
+
+    it("BerlinClock should return YYRYYR00000 when given 30", function() {
+        expect(result).toBe("YYRYYR00000");
+    });
+
+    it("BerlinClock should return YYRYYRYY000 when given 40", function() {
+        expect(result).toBe("YYRYYRYY000");
+    });
+
+    
+});
 
