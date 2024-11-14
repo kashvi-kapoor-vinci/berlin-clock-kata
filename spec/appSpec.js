@@ -54,14 +54,14 @@ describe("Berlin clock kata project", function() {
 
     // --------------------  STEP 1 and 2 : Combined tests  --------------------
 
-    it("BerlinClock should return 0000:0000:YYR00000000:Y000 when given 00:16:00", function() {
-        const result = main.berlinClock(0,16);
-        expect(result).toBe("0000\n0000\nYYR00000000\nY000");
+    it("BerlinClock should return R:0000:0000:YYR00000000:Y000 when given 00:16:00", function() {
+        const result = main.berlinClock(0,16,0);
+        expect(result).toBe("R\n0000\n0000\nYYR00000000\nY000");
     });
 
-    it("BerlinClock should return 0000:0000:YYRYYRY0000:YYYY when given 00:39:00", function() {
-        const result = main.berlinClock(0,39);
-        expect(result).toBe("0000\n0000\nYYRYYRY0000\nYYYY");
+    it("BerlinClock should return R:0000:0000:YYRYYRY0000:YYYY when given 00:39:00", function() {
+        const result = main.berlinClock(0,39,0);
+        expect(result).toBe("R\n0000\n0000\nYYRYYRY0000\nYYYY");
     });
 
     // --------------------  STEP 3 : Simple Hours  --------------------
@@ -93,14 +93,14 @@ describe("Berlin clock kata project", function() {
 
     // --------------------  STEP 1, 2 and 3 : Combined tests  --------------------
 
-    it("BerlinClock should return 0000:RR00:YYRYY000000:Y000 when given 02:26:00", function() {
-        const result = main.berlinClock(2,26);
-        expect(result).toBe("0000\nRR00\nYYRYY000000\nY000");
+    it("BerlinClock should return R:0000:RR00:YYRYY000000:Y000 when given 02:26:00", function() {
+        const result = main.berlinClock(2,26,0);
+        expect(result).toBe("R\n0000\nRR00\nYYRYY000000\nY000");
     });
 
-    it("BerlinClock should return 0000:RRRR:YYRYYRYYRYY:YYYY when given 04:59:00", function() {
-        const result = main.berlinClock(4,59);
-        expect(result).toBe("0000\nRRRR\nYYRYYRYYRYY\nYYYY");
+    it("BerlinClock should return R:0000:RRRR:YYRYYRYYRYY:YYYY when given 04:59:00", function() {
+        const result = main.berlinClock(4,59,0);
+        expect(result).toBe("R\n0000\nRRRR\nYYRYYRYYRYY\nYYYY");
     });
 
     // --------------------  STEP 4 : Five Hours Block  --------------------
@@ -132,14 +132,14 @@ describe("Berlin clock kata project", function() {
 
     // --------------------  STEP 1, 2, 3 and 4 : Combined tests  --------------------
 
-    it("BerlinClock should return RRR0:RR00:00000000000:0000 when given 17:00:00", function() {
-        const result = main.berlinClock(17,0);
-        expect(result).toBe("RRR0\nRR00\n00000000000\n0000");
+    it("BerlinClock should return R:RRR0:RR00:00000000000:0000 when given 17:00:00", function() {
+        const result = main.berlinClock(17,0,0);
+        expect(result).toBe("R\nRRR0\nRR00\n00000000000\n0000");
     });
 
-    it("BerlinClock should return RRRR:R000:YYRYYRYYRYY:YYYY when given 21:59:00", function() {
-        const result = main.berlinClock(21,59);
-        expect(result).toBe("RRRR\nR000\nYYRYYRYYRYY\nYYYY");
+    it("BerlinClock should return R:RRRR:R000:YYRYYRYYRYY:YYYY when given 21:59:00", function() {
+        const result = main.berlinClock(21,59,0);
+        expect(result).toBe("R\nRRRR\nR000\nYYRYYRYYRYY\nYYYY");
     });
 
     // --------------------  STEP 5 : Even or odd seconds lamp --------------------
