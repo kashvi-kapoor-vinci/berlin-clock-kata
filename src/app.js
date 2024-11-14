@@ -36,7 +36,7 @@ export class Main {
 
     light(i, lightOnCount, lights) {
         if (i < lightOnCount) {
-            lights += (i + 1) % 3 === 0 ? 'R' : 'Y';
+            lights += (i + 1) % 3 === 0 ? 'R' : 'Y'; // multiple of 3 = red light
         } else {
             lights += '0';
         }
