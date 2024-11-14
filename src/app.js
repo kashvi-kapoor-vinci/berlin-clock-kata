@@ -3,7 +3,7 @@ export class Main {
     // "Y" = Yellow (light on)
     // "R" = Red (light on)
     // "0" = Light Off
-    
+
     //Returns berlin clock
     berlinClock(time){ 
         const second = this.getSeconds(time);
@@ -24,22 +24,23 @@ export class Main {
     //Returns the display of five minutes block as a string.
     getFiveMinutes(time) {
         const minutes = this.getMinutes(time);
-        const lightOn = Math.floor(minutes / 5); 
-        let totalLights = ""; 
-
-        for (let i = 0; i < lightOn; i++) {
-            if ((i + 1) % 3 === 0) {  // multiple of 3 = red light
-                totalLights += "R";
-            } else {
-                totalLights += "Y"; 
-            }
+        const lightOnCount = Math.floor(minutes / 5);
+        let lights = '';
+    
+        for (let i = 0; i < 11; i++) {
+            lights = this.light(i, lightOnCount, lights);
         }
+    
+        return lights;
+    }
 
-        while (totalLights.length < 11) {
-            totalLights += "0";
+    light(i, lightOnCount, lights) {
+        if (i < lightOnCount) {
+            lights += (i + 1) % 3 === 0 ? 'R' : 'Y';
+        } else {
+            lights += '0';
         }
-
-        return totalLights; 
+        return lights;
     }
 
     //Returns the display of simple hours as a string.
