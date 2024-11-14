@@ -5,7 +5,8 @@ export class Main {
     berlinClock(time){ 
         const simpleMinutes = this.getSimpleMinute(time);
         const fiveMinutes = this.getFiveMinutes(time);
-        return `${fiveMinutes}\n${simpleMinutes}`;
+        const simpleHour = this.getSimpleHour(time);
+        return `${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
     }
 
     //Returns the display of simple minutes as a string.
