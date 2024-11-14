@@ -145,12 +145,12 @@ describe("Berlin clock kata project", function() {
     // --------------------  STEP 5 : Even or odd seconds lamp --------------------
 
     it("BerlinClock should return R when given even second", function(){
-        const result = main.getSeconds(2);
+        const result = main.getSeconds("00:00:02");
         expect(result).toBe("R");
     });
 
     it("BerlinClock should return 0 when given odd second", function(){
-        const result = main.getSeconds(1);
+        const result = main.getSeconds("00:00:01");
         expect(result).toBe("0");
     });
 
