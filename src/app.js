@@ -3,10 +3,11 @@ export class Main {
     
     //Returns berlin clock
     berlinClock(hours, minutes){ 
-        const simpleMinutes = this.getSimpleMinute(minutes);
-        const fiveMinutes = this.getFiveMinutes(minutes);
+        const fiveHours = this.getFiveHours(hours);
         const simpleHour = this.getSimpleHour(hours);
-        return `${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
+        const fiveMinutes = this.getFiveMinutes(minutes);
+        const simpleMinutes = this.getSimpleMinute(minutes);
+        return `${fiveHours}\n${simpleHour}\n${fiveMinutes}\n${simpleMinutes}`;
     }
 
     //Returns the display of simple minutes as a string.
@@ -42,7 +43,7 @@ export class Main {
     }
 
     //Returns the display of five hours block as a string.
-    getFiveHours(time) {
+    getFiveHours(hours) {
         const fiveHours = parseInt(hours / 5);
         return "R".repeat(fiveHours) + "0".repeat(Math.abs(4-fiveHours));
     }
