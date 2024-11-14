@@ -105,28 +105,28 @@ describe("Berlin clock kata project", function() {
 
     // --------------------  STEP 4 : Five Hours Block  --------------------
 
-    it("BerlinClock should return 0000 when given 0", function() {
-        const result = main.getFiveHours(0);
+    it("BerlinClock should return 0000 when given 00:00:00", function() {
+        const result = main.getFiveHours("00:00:00");
         expect(result).toBe("0000");
     });
 
-    it("BerlinClock should return R000 when given 5", function() {
-        const result = main.getFiveHours(5);
+    it("BerlinClock should return R000 when given 05:00:00", function() {
+        const result = main.getFiveHours("05:00:00");
         expect(result).toBe("R000");
     });
 
-    it("BerlinClock should return RR00 when given 10", function() {
-        const result = main.getFiveHours(10);
+    it("BerlinClock should return RR00 when given 10:00:00", function() {
+        const result = main.getFiveHours("10:00:00");
         expect(result).toBe("RR00");
     });
 
-    it("BerlinClock should return RRR0 when given 15", function() {
-        const result = main.getFiveHours(15);
+    it("BerlinClock should return RRR0 when given 15:00:00", function() {
+        const result = main.getFiveHours("15:00:00");
         expect(result).toBe("RRR0");
     });
 
-    it("BerlinClock should return RRRR when given 20", function() {
-        const result = main.getFiveHours(20);
+    it("BerlinClock should return RRRR when given 20:00:00", function() {
+        const result = main.getFiveHours("20:00:00");
         expect(result).toBe("RRRR");
     });
 
