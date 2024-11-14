@@ -142,5 +142,16 @@ describe("Berlin clock kata project", function() {
         expect(result).toBe("RRRR\nR000\nYYRYYRYYRYY\nYYYY");
     });
 
+    // --------------------  STEP 5 : Even or odd seconds lamp --------------------
+
+    it("BerlinClock should return R when given even second", function(){
+        expect(result).toBe("R");
+    });
+
+    it("BerlinClock should return 0 when given odd second", function(){
+        expect(result).toBe("0");
+    });
+
+
 });
 
